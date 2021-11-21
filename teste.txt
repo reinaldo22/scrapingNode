@@ -1,0 +1,32 @@
+/*const cheerio = require('cheerio');
+const axios = require('axios');
+
+/*const paginaHtml = `<html>
+<head>
+    <title>Lista de aprovados</title>
+</head>
+<ul id="nomes">
+    <li class="primeiro">Pedro</li>
+    <li class="segundo">Reinaldo</li>
+    <li class="terceiro">Fulano</li>
+</ul>
+<body>
+    
+</body>
+</html>
+`
+*/
+//chama o cheerio
+//const $ = cheerio.load(paginaHtml)
+//Para pegar id ele sempre vem com # exemplo:
+//const dados = $('#nomes').text()
+
+//posso tegar tudo que for texto exemplo:
+//const dados = $('*').text()
+
+//posso tegar tudo que for texto exemplo:
+//const dados = $('.primeiro').text()
+
+//posso tegar tudo que for tag exemplo:
+//const dados = $('ul').text()
+*/
