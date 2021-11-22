@@ -5,18 +5,18 @@ const { Pool } = require('pg');
 require('dotenv').config()
 
 const pool = new Pool({
-    user: process.env.USER,
-    host: process.env.HOST,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.PORT
+    user: '',
+    host: '',
+    password: '',
+    database: '',
+    port: ''
 });
 
 const salvandoDados = async(linhas) =>{
     
     try {
     await pool.query(`INSERT INTO scraping(portal,categoria,data,tag,enunciado,link) VALUES ($1,$2,$3,$4,$5,$6)`,[linhas.portal, linhas.categoria,linhas.data,linhas.tag,linhas.enunciado,linhas.link])
-    console.log('ok!')
+    console.log('CADASTRANDO!')
 } catch (error) {
     console.log("erro aqui>>>>>>>>>>>>>>>>>", error)
 }
@@ -42,9 +42,9 @@ const gravando = async(linhas) => {
     //console.log("ARRb>>>>>>>>>>>>>>>", await arrB[0])
     let countResult = arrB.length
     if(countResult ===  0){
-        salvandoDados(dados)
+       await salvandoDados(dados)
     }else{
-        console.log('Tag ja cadastrada!')
+        console.log('Notícia já cadastrada!')
     }
     
     
