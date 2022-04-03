@@ -16,7 +16,7 @@ const pool = new Pool({
 });
 
 const getNewsController = async (req, res) => {
-    const response = await pool.query('SELECT distinct tag,enunciado,link from scraping');
+    const response = await pool.query('SELECT distinct tag,enunciado,link,categoria,data from scraping');
     
     res.status(200).json(response.rows);
 };
